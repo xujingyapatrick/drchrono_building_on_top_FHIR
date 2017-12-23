@@ -1,5 +1,8 @@
 # drchrono Project - Building on top of FHIR API
 A Project written in Pyhon/Django + Highcharts Javascript + JQuery + Bootstrap
+started with https://github.com/drchrono/api-example-django
+It allows user login with Onpatient account, to retrieve all information on Onpatient.com
+
 ### Requirements
 - [pip](https://pip.pypa.io/en/stable/)
 - [python virtual env](https://packaging.python.org/installing/#creating-and-using-virtual-environments)
@@ -20,5 +23,5 @@ LOGIN_REDIRECT_URL
 ```
 
 ### Design Decision
-1. I started with https://github.com/drchrono/api-example-django 
-
+1.  
+2. 
