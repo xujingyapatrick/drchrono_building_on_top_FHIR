@@ -1,5 +1,6 @@
 # drchrono Project - Building on top of FHIR API
 - A Project written in Pyhon/Django + JQuery + Bootstrap + Responsive Web Design
+- Project Description http://kivatinos.com/2017/08/11/building-fast-healthcare-interoperability-resources-fhir/
 - started with https://github.com/drchrono/api-example-django
 - allowed user to login with Onpatient account, to retrieve all information on Onpatient.com
 - Other features: Blood Presure Tracker, Hydrate Tracker, Sleep Tracker, Weight Tracker
