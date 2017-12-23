@@ -16,8 +16,8 @@ $ python manage.py runserver
 `social_auth_drchrono/` contains a custom provider for [Python Social Auth](http://python-social-auth.readthedocs.io/en/latest/) that handles OAUTH for drchrono. To configure it, set these fields in your `drchrono/settings.py` file:
 
 ```
-SOCIAL_AUTH_DRCHRONO_KEY
-SOCIAL_AUTH_DRCHRONO_SECRET
+SOCIAL_AUTH_ONPATIENT_KEY
+SOCIAL_AUTH_ONPATIENT_SECRET
 LOGIN_REDIRECT_URL
 ```
 
