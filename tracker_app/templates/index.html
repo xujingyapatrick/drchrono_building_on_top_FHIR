@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block content %}
+	<div id = "content" class="container">
+      	<div id= "myCarousel" class = "carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+			<div class="carousel-inner" role="listbox">
+				
+				<div class="item active">
+					<div id = "informationBar" class = "row">
+						<div class = "col-sm-6 col-md-6 col-xs-6" style="vertical-align: top;margin-top: -10px;"><h3><b>Info from Patient.com</b></h3>
+						</div>
+                        <div class = "col-sm-6 col-md-6 col-xs-6" style="vertical-align: top; margin-top: 5px;" align="right">
+                        	<label title="Tracker System"><span class="hidden-xs" class="hidden-sm" id="auto">Add data to Tracking System</span> </label>
+                        	<a href = "{% url 'tracker_app:tracking-create' patient_id %}"><button type="button" id="AddData" class="btn btn-default btn-md" title="Add data to Tracking System"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
+                            <button type="button" id="myBtn1" class="btn btn-default btn-md" title="Go to Tracker System"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                        </div>
+					</div>	
+					<ul class="nav nav-pills">
+			            <li class="active"><a data-toggle="pill" href="#menu1">Personal Information</a></li>
+			            <li><a data-toggle="pill" href="#menu2">Recorded Info from Doctor</a></li>
+			        </ul>
+			        <div class="tab-content">
+						<div id="menu1" class="tab-pane fade in active">
+							<hr>
+							<div class = "row">
+								<div class = "col-sm-12 col-md-12 col-xs-12">
+									<h3 style="margin-top: -5px;"><b>Personal Information</b></h3>
+									{% if patients_data %}
+										{% for patient in patients_data %}
+											<table class = "table table-striped">
+												<tr><th>ID</th><td>{{ patient.id }}</td></tr>
+												<tr><th>Name</th><td>{{ patient.name }}</td></tr>
+												<tr><th>Gender</th><td>{{ patient.gender }}</td></tr>
+												<tr><th>Date of Birth</th><td>{{ patient.birthDate }}</td></tr>
+												{% if patient.contacts %}
+													{% for contact in patient.contacts %}
+														<tr><th>Contact Info</th><td>{{ contact }}</td></tr>
+													{% endfor %}	
+												{% else %}
+													<tr><th>Contact Info</th><td>No any contact information</td></tr>
+												{% endif %}
+											</table>
+										{% endfor %}
+									{% else %}
+										<h1> No Information </h1>
+									{% endif %}
+								</div>
+								
+							</div>
+								
+						</div>
+						<div id="menu2" class="tab-pane fade">
+							<hr>
+							<div class = "row">
+								<div class = "col-sm-12 col-md-12 col-xs-12">
+									<h3 style="margin-top: -5px;"><b>Last Vital Sign Record from Doctor</b></h3>
+									{% if observations %}
+										<table class = "table table-striped">
+											<tr><th>Body Temperature</th><td>{{ observations.Body_tempurature | last }} (f)</td></tr>
+											<tr><th>Pulse</th><td> {{ observations.Heart_rate | last}} (bpm)</td></tr>
+											<tr><th>Respiratory Rate</th><td>{{ observations.Respiratory_Rate | last }} rpm</td></tr>
+											<tr><th>Blood Pressure</th><td>{{ observations.Systolic_blood_pressure | last }} / {{ observations.Diastolic_blood_pressure| last }} (mmHg)</td></tr>
+											<tr><th>Oxygen saturation</th><td>{{ observations.Oxygen_saturation | last }} (%)</td></tr>
+											<tr><th>Height</th><td>{{ observations.Body_height | last }} (ln)</td></tr>
+											<tr><th>Weight</th><td>{{ observations.Body_weight | last }} (lb)</td></tr>
+											<tr><th>BMI</th><td>{{ observations.BMI | last }}</td></tr>
+											
+											
+										</table>
+									{% else %}
+										<h1> No Information </h1>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+
+					<div class = "row">
+						
+                        <div class = "col-sm-4 col-md-4 col-xs-4" style="vertical-align: top; margin-top: 5px;" align="left">
+                            <button type="button" id="myBtn2" class="btn btn-default btn-md" title="Go to Tracker System"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+                            
+                        </div>
+                        <div class = "col-sm-6 col-md-6 col-xs-6" style="vertical-align: top;margin-top: -10px;"><h3><b>Daily Tracking System</b></h3>
+
+						</div>
+					</div>
+					
+					<ul class="nav nav-pills">
+			            <li class="active"><a data-toggle="pill" href="#tracker1">Weight Tracker</a></li>
+			            <li><a data-toggle="pill" href="#tracker2">Blood Pressure Tracker</a></li>
+			            <li><a data-toggle="pill" href="#tracker3">Hydrate Tracker</a></li>
+			            <li><a data-toggle="pill" href="#tracker4">Sleep Tracker</a></li>
+			        </ul>
+			        <div id = "chartDisplay" class="tab-content">
+						<div id="tracker1" class="tab-pane fade in active">
+							<hr>
+							<div id = "chart_container_weight"></div>
+							
+						</div>
+						<div id="tracker2" class="tab-pane fade">
+							<hr>
+							<div id = "chart_container_bp"></div>
+							
+						</div>
+						<div id="tracker3" class="tab-pane fade">
+							<hr>
+							<div id = "chart_container_hydrate"></div>
+							
+						</div>
+						<div id="tracker4" class="tab-pane fade">
+							<hr>
+							<div id = "chart_container_sleep"></div>
+							
+						</div>
+					</div>	
+					
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+#btn {
+	color: #00A900;
+	border: 3px solid; 
+}
+#content {
+	background-color: #F9F9F9;
+	margin-top: 50px;
+	border-radius: 15px;
+}
+#innerContent {
+	margin-bottom: 25px;
+}

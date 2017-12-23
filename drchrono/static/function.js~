@@ -1,0 +1,30 @@
+//var jsonObserv = {{ observations|safe }};
+$(function () {
+	$('#chart_container').highcharts({
+		chart: {
+			type: 'column'
+		},
+		title: {
+			text: 'Body Pressure Tracker'
+		},
+		xAxis: {
+			categories:   jsonObserv.timeStamp
+		},
+		yAxis: {
+			title: {
+				text: 'mmHg'
+			}
+		},
+		series: 
+		[
+			{
+				name: 'Systolic blood pressure',
+				data: jsonObserv.Systolic_blood_pressure
+			}, 
+			{
+			name: 'Diastolic blood pressure',
+				data: jsonObserv.Diastolic_blood_pressure
+			}
+		]
+	});
+});

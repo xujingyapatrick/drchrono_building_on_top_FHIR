@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+	<div id = "content" class="container">
+		<hr>
+		<div class = "row">
+			<div class = "col-sm-12 col-md-12 col-xs-12">
+				{% if erroe_message %}
+					<p><strong> {{ error_message }} </strong></p>
+				{% endif %}
+				<form action= "" method="post">
+				    {% csrf_token %}
+				    {% include 'tracker_app/form-template.html' %}
+
+				    <div class="form-group">
+				    	   
+			            <button type="submit" class="btn btn-success">Submit</button>
+				        
+				    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

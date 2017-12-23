@@ -1,0 +1,36 @@
+#myCarousel {
+	margin-top: 0.5cm;
+}
+#myCarousel .nav  li  a{
+	border: 1px solid;
+}
+#myCarousel .nav > li.active > a{
+	background-color: #00A900;
+	color: #FFFFFF;
+}
+#myCarousel .nav > li > a{
+	font-size: 16px;
+	font-weight: bold;
+	color: #00A900;
+}
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: #CCF0CC;
+}
+.table-striped>tbody>tr:nth-child(even)>td, .table-striped>tbody>tr:nth-child(even)>th {
+	background-color: #F9F9F9;
+}
+body {
+	background-color:#FFFFE2;
+}
+#content {
+
+	background-color: #FFFFFF;
+	border-radius:25px;
+}
+hr {
+	margin-top: 30px;
+	margin-bottom: 25px;
+}
+#chartDisplay {
+	margin-bottom: 25px;
+}

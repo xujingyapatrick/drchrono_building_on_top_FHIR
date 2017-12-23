@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+	<!--META-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Patient information</title>
+
+	<link type="image/png"	href="https://app.drchrono.com/site_media/images/favicon.png"	rel="icon"></link>
+	<!--STYLESHEETS-->
+	
+	<!--SCRIPTS-->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link href="{% static "loginStyle.css" %}" rel="stylesheet">
+    </head>
+	<body>
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span> 
+						
+					</button>
+					<a href="#"><img src="{% static "logo.svg" %}" vspace="5"></a>
+				</div>
+			</div>
+		</nav>
+		<br>
+		<br>
+		<br>
+		<div class = "container" id = "content">
+			<div class = "row" id = "innerContent">
+				<div class = "col-xs-12 col-sm-12 col-md-12">
+					<h1 style="font-size: 50px;">Building on Top of FHIR API</h1>
+        				<ul style = "margin-bottom: 25px;">
+        					<li><b>This project allowes user to retrieve all information that is available from Onpatient.com </b></li>
+        					<li><b>This project also provides tracker systems features</b></li>
+        					<ul>
+        						<li><b>Blood presure tracker</b></li>
+        						<li><b>Sleep tracker</b></li>
+        						<li><b>Weight tracker</b></li>
+        						<li><b>Hydrate tracker</b></li>
+        					</ul>
+        				</ul>
+					<a id = "btn" href="{% url 'social:begin' 'onpatient' %}" class = "btn btn-default btn-lg" role = "button">Login with Onpatient</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+</html>
