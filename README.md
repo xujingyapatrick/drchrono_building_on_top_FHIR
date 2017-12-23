@@ -2,9 +2,7 @@
 - A Project written in Pyhon/Django + JQuery + Bootstrap + Responsive Web Design
 - started with https://github.com/drchrono/api-example-django
 - allowed user to login with Onpatient account, to retrieve all information on Onpatient.com
-- Other features: 
--- Blood Presure Tracker, 
--- Hydrate Tracker, Sleep Tracker, Weight Tracker
+- Other features: Blood Presure Tracker, Hydrate Tracker, Sleep Tracker, Weight Tracker
 ### Requirements
 - [pip](https://pip.pypa.io/en/stable/)
 - [python virtual env](https://packaging.python.org/installing/#creating-and-using-virtual-environments)
