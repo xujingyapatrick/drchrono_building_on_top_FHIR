@@ -24,4 +24,7 @@ LOGIN_REDIRECT_URL
 
 # Design Decision
 ## Database
-Once user login successfully, only stored their Patient ID to database, this Patient ID will be associated with Tracker Systems later
+- Once user login successfully, only stored their Patient ID to database, this Patient ID will be associated with Tracker Systems later
+## Information from Onpatient.com
+- Except for patient information, also retrieve the last recoreded vital sign from doctor. 
+- The reason is that, from patients' perpective, paitents should be care of the last recorded information by vising to the doctor
