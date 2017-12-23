@@ -23,8 +23,10 @@ LOGIN_REDIRECT_URL
 ```
 
 # Design Decision
-## Database
-- Once user login successfully, only stored their Patient ID to database, this Patient ID will be associated with Tracker Systems later
 ## Information from Onpatient.com
 - Except for patient information, also retrieve the last recoreded vital sign from doctor. 
-- The reason is that, from patients' perpective, paitents should be care of the last recorded information by vising to the doctor
+- The reason is that, from patients' perpective, paitents should be care of the last recorded information by visiting the doctor
+## Database
+- Once patients login successfully, only stored their Patient ID to database, this Patient ID will be associated with Tracker Systems later
+## Statistic Visualization 
+- Using highcharts.js to display data in a visual way, which is the best way for patients to see all changes 
