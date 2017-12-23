@@ -11,7 +11,7 @@
 ## Database
 - Once patients login successfully, only stored their Patient ID to database, this Patient ID will be associated with Tracker Systems later
 ## Statistic Visualization 
-- Using highcharts.js to display data in a visual way, which is the best way for patients to see all changes 
+- Using highcharts.js to display data in a visual way, which is the best way for patients to see all changes in tracker systems
 
 ## Screenshot for Login Page
 ![login_pag](https://user-images.githubusercontent.com/18036551/34318657-4f2955c4-e783-11e7-9799-8159fecb2b61.png)
