@@ -1,4 +1,4 @@
-# drchrono Hackathon
+# drchrono Project - Building on top of FHIR API
 
 ### Requirements
 - [pip](https://pip.pypa.io/en/stable/)
