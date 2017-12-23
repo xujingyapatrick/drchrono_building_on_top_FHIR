@@ -19,4 +19,6 @@ SOCIAL_AUTH_DRCHRONO_SCOPE
 LOGIN_REDIRECT_URL
 ```
 
-### Design Design
+### Design Decision
+1. I started with https://github.com/drchrono/api-example-django 
+
