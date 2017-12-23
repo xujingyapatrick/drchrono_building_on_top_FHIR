@@ -1,5 +1,5 @@
 # drchrono Project - Building on top of FHIR API
-
+A Project written in Pyhon/Django + Highcharts Javascript + JQuery + Bootstrap
 ### Requirements
 - [pip](https://pip.pypa.io/en/stable/)
 - [python virtual env](https://packaging.python.org/installing/#creating-and-using-virtual-environments)
@@ -18,3 +18,5 @@ SOCIAL_AUTH_DRCHRONO_SECRET
 SOCIAL_AUTH_DRCHRONO_SCOPE
 LOGIN_REDIRECT_URL
 ```
+
+### Design Design
