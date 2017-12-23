@@ -30,14 +30,16 @@ LOGIN_REDIRECT_URL
 ## Statistic Visualization 
 - Using highcharts.js to display data in a visual way, which is the best way for patients to see all changes 
 
+## Screen for Login Page
 ![login_pag](https://user-images.githubusercontent.com/18036551/34318657-4f2955c4-e783-11e7-9799-8159fecb2b61.png)
 
+## Screen for Patient Information
 ![personal_info](https://user-images.githubusercontent.com/18036551/34318659-65b5cc1e-e783-11e7-87d4-42a83c76e15d.png)
-
 ![recorded_info](https://user-images.githubusercontent.com/18036551/34318663-6c1bc2c0-e783-11e7-94a2-ebdbcc46f563.png)
 
+## Screen for Adding Data to Tracker System
 ![adding_data](https://user-images.githubusercontent.com/18036551/34318667-77782c44-e783-11e7-8cab-5d6ade91f4c7.png)
 
+## Screen for Tracker System
 ![blood_pressure_tracker](https://user-images.githubusercontent.com/18036551/34318670-7f86902e-e783-11e7-85a4-bb5d1be61621.png)
-
 ![weight_tracker](https://user-images.githubusercontent.com/18036551/34318671-83a7fd96-e783-11e7-8e15-83c1a566eb3d.png)
