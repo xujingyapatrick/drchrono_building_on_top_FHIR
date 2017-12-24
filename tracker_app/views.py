@@ -10,7 +10,7 @@ from .models import trackerSystem, Patient
 from form import trackerForm
 def index(request):
 	if request.user.is_authenticated():
-		socialObj = UserSocialAuth.objects.filter(provider='onpatient')[0]
+		request.user.social_auth.get(provider='onpatient')
 		patients = api_functions.get_patient_info(socialObj)
 		observations = api_functions.get_observation(socialObj)
 		#immunizations = api_functions.get_immunization(socialObj)
