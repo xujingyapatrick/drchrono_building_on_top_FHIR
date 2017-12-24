@@ -40,3 +40,6 @@ class drchronoOAuth2(BaseOAuth2):
 
     def get_auth_header(self, access_token):
         return {'Authorization': 'Bearer {0}'.format(access_token)}
+    
+    def get_user_id(self, details, response):
+        return response.get('results')[0].get('identifier')
