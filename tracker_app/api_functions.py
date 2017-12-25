@@ -1,5 +1,6 @@
 import requests
-from models import Patient
+from models import Patient, trackerSystem
+from datetime import datetime
 
 def get_immunization(social):
     headers = {'Authorization': 'Bearer %s' % social.extra_data['access_token']}
@@ -118,3 +119,21 @@ def get_observation(social):
 def split_timestamp(timestamp):
 
     return ' '.join(timestamp.split('T'))
+
+def get_trackerSystem(patient):
+    trackerData = trackerSystem.objects.filter(patient = patient).order_by('-Date').reverse() 
+    trackerDict = {}
+    trackerDict['daily_sbp'] = []
+    trackerDict['daily_dbp'] = []
+    trackerDict['daily_weight'] = []
+    trackerDict['daily_hydrate'] = []
+    trackerDict['daily_sleep'] = []
+    trackerDict['date'] = []
+    for data in trackerData:
+        trackerDict['daily_sbp'].append(data.Daily_Systolic_Blood_Pressure)
+        trackerDict['daily_dbp'].append(data.Daily_Diastolic_Blood_Pressure)
+        trackerDict['daily_weight'].append(data.Daily_Weight)
+        trackerDict['daily_hydrate'].append(data.Daily_Hydrate_Volume)
+        trackerDict['daily_sleep'].append(data.Daily_Sleep_Time)
+        trackerDict['date'].append(datetime.strftime(data.Date, "%Y-%m-%d"))
+    return trackerDict
