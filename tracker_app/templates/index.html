@@ -10,7 +10,7 @@
 						</div>
                         <div class = "col-sm-6 col-md-6 col-xs-6" style="vertical-align: top; margin-top: 5px;" align="right">
                         	<label title="Tracker System"><span class="hidden-xs" class="hidden-sm" id="auto">Add data to Tracking System</span> </label>
-                        	<a href = "{% url 'tracker_app:tracking-create' patient_id %}"><button type="button" id="AddData" class="btn btn-default btn-md" title="Add data to Tracking System"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
+                        	<a href = "{% url 'tracker_app:tracking-create' request.session.user_id %}"><button type="button" id="AddData" class="btn btn-default btn-md" title="Add data to Tracking System"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
                             <button type="button" id="myBtn1" class="btn btn-default btn-md" title="Go to Tracker System"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
                         </div>
 					</div>	
