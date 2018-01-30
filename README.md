@@ -6,7 +6,7 @@
 - Other features: Blood Presure Tracker, Hydrate Tracker, Sleep Tracker, Weight Tracker
 # Design Decision
 ## Information from Onpatient.com
-- Except for patient information, also retrieve the last recoreded vital sign from doctor. 
+- Not only retrieve patient information, also retrieve the last recoreded vital sign from doctor. 
 - The reason is that, from patients' perpective, paitents should be care of the last recorded information by visiting the doctor
 ## Database
 - Once patients login successfully, only stored their Patient ID to database, this Patient ID will be associated with Tracker Systems later
